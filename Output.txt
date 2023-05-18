@@ -1,0 +1,178 @@
+======================================== System Information ========================================
+System: Linux
+Node Name: saeid-virtual-machine
+Release: 5.19.0-41-generic
+Version: #42~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue Apr 18 17:40:00 UTC 2
+Machine: x86_64
+Processor: x86_64
+======================================== Boot Time ========================================
+Boot Time: 2023/5/18 8:27:23
+======================================== CPU Info ========================================
+Physical cores: 2
+Total cores: 2
+Max Frequency: 0.00Mhz
+Min Frequency: 0.00Mhz
+Current Frequency: 2394.46Mhz
+CPU Usage Per Core:
+Core 0: 31.6%
+Core 1: 38.4%
+Total CPU Usage: 35.5%
+CPU Usage Per Core:
+Core 0: 54.6%
+Core 1: 54.1%
+Total CPU Usage: 54.5%
+CPU Usage Per Core:
+Core 0: 35.8%
+Core 1: 31.6%
+Total CPU Usage: 31.6%
+CPU Usage Per Core:
+Core 0: 38.9%
+Core 1: 14.4%
+Total CPU Usage: 28.9%
+CPU Usage Per Core:
+Core 0: 31.6%
+Core 1: 20.2%
+Total CPU Usage: 27.1%
+CPU Usage Per Core:
+Core 0: 18.1%
+Core 1: 34.0%
+Total CPU Usage: 26.5%
+CPU Usage Per Core:
+Core 0: 41.8%
+Core 1: 18.4%
+Total CPU Usage: 26.1%
+CPU Usage Per Core:
+Core 0: 41.7%
+Core 1: 12.6%
+Total CPU Usage: 26.8%
+CPU Usage Per Core:
+Core 0: 20.8%
+Core 1: 35.4%
+Total CPU Usage: 26.8%
+======================================== Memory Information ========================================
+Total: 3.54GB
+Available: 728.51MB
+Used: 2.52GB
+Percentage: 79.9%
+==================== SWAP ====================
+Total: 4.08GB
+Free: 2.48GB
+Used: 1.61GB
+Percentage: 39.3%
+======================================== Disk Information ========================================
+Partitions and Usage:
+=== Device: /dev/sda3 ===
+  Mountpoint: /
+  File system type: ext4
+  Total Size: 38.58GB
+  Used: 13.24GB
+  Free: 23.35GB
+  Percentage: 36.2%
+=== Device: /dev/loop0 ===
+  Mountpoint: /snap/bare/5
+  File system type: squashfs
+  Total Size: 128.00KB
+  Used: 128.00KB
+  Free: 0.00B
+  Percentage: 100.0%
+=== Device: /dev/loop1 ===
+  Mountpoint: /snap/core20/1822
+  File system type: squashfs
+  Total Size: 63.38MB
+  Used: 63.38MB
+  Free: 0.00B
+  Percentage: 100.0%
+=== Device: /dev/loop3 ===
+  Mountpoint: /snap/gtk-common-themes/1535
+  File system type: squashfs
+  Total Size: 91.75MB
+  Used: 91.75MB
+  Free: 0.00B
+  Percentage: 100.0%
+=== Device: /dev/loop4 ===
+  Mountpoint: /snap/gnome-3-38-2004/119
+  File system type: squashfs
+  Total Size: 346.38MB
+  Used: 346.38MB
+  Free: 0.00B
+  Percentage: 100.0%
+=== Device: /dev/loop2 ===
+  Mountpoint: /snap/firefox/2356
+  File system type: squashfs
+  Total Size: 240.62MB
+  Used: 240.62MB
+  Free: 0.00B
+  Percentage: 100.0%
+=== Device: /dev/loop5 ===
+  Mountpoint: /snap/snap-store/638
+  File system type: squashfs
+  Total Size: 46.00MB
+  Used: 46.00MB
+  Free: 0.00B
+  Percentage: 100.0%
+=== Device: /dev/loop6 ===
+  Mountpoint: /snap/snapd/18357
+  File system type: squashfs
+  Total Size: 49.88MB
+  Used: 49.88MB
+  Free: 0.00B
+  Percentage: 100.0%
+=== Device: /dev/loop7 ===
+  Mountpoint: /snap/snapd-desktop-integration/49
+  File system type: squashfs
+  Total Size: 384.00KB
+  Used: 384.00KB
+  Free: 0.00B
+  Percentage: 100.0%
+=== Device: /dev/sda2 ===
+  Mountpoint: /boot/efi
+  File system type: vfat
+  Total Size: 511.96MB
+  Used: 6.07MB
+  Free: 505.89MB
+  Percentage: 1.2%
+=== Device: /dev/sda3 ===
+  Mountpoint: /var/snap/firefox/common/host-hunspell
+  File system type: ext4
+  Total Size: 38.58GB
+  Used: 13.24GB
+  Free: 23.35GB
+  Percentage: 36.2%
+=== Device: /dev/loop8 ===
+  Mountpoint: /snap/code/129
+  File system type: squashfs
+  Total Size: 302.25MB
+  Used: 302.25MB
+  Free: 0.00B
+  Percentage: 100.0%
+Total read: 7.23GB
+Total write: 12.55GB
+======================================== Network Information ========================================
+=== Interface: lo ===
+  IP Address: 127.0.0.1
+  Netmask: 255.0.0.0
+  Broadcast IP: None
+=== Interface: lo ===
+=== Interface: lo ===
+  MAC Address: 00:00:00:00:00:00
+  Netmask: None
+  Broadcast MAC: None
+=== Interface: ens33 ===
+  IP Address: 192.168.11.129
+  Netmask: 255.255.255.0
+  Broadcast IP: 192.168.11.255
+=== Interface: ens33 ===
+=== Interface: ens33 ===
+  MAC Address: 00:0c:29:51:5f:50
+  Netmask: None
+  Broadcast MAC: ff:ff:ff:ff:ff:ff
+Total Bytes Sent: 22.71MB
+Total Bytes Received: 1.24GB
+System: Linux
+Node Name: saeid-virtual-machine
+Release: 5.19.0-41-generic
+Version: #42~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue Apr 18 17:40:00 UTC 2
+Machine: x86_64
+Processor: x86_64
+======================================== Boot Time ========================================
+Boot Time: 2023/5/18 8:27:23
