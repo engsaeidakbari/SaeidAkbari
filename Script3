@@ -1,0 +1,81 @@
+import tkinter as tk
+import psutil
+import pycuda.driver as cuda
+
+
+class ResourceMonitor:
+    def __init__(self):
+        self.root = tk.Tk()
+        self.root.title("Resource Monitor")
+
+        self.cpu_increase = 0
+        self.gpu_increase = 0
+
+        self.label_cpu_cores = []
+        self.label_gpu_cores = []
+
+        self.create_cpu_widgets()
+        self.create_gpu_widgets()
+
+        self.label_cpu_increase = tk.Label(self.root, text="CPU Increase:")
+        self.label_cpu_increase.pack()
+        self.entry_cpu_increase = tk.Entry(self.root)
+        self.entry_cpu_increase.pack()
+
+        self.label_gpu_increase = tk.Label(self.root, text="GPU Increase:")
+        self.label_gpu_increase.pack()
+        self.entry_gpu_increase = tk.Entry(self.root)
+        self.entry_gpu_increase.pack()
+
+        self.button_increase = tk.Button(self.root, text="Increase", command=self.increase_load)
+        self.button_increase.pack()
+
+        self.button_reset = tk.Button(self.root, text="Reset", command=self.reset_load)
+        self.button_reset.pack()
+
+        self.root.mainloop()
+
+    def create_cpu_widgets(self):
+        cpu_info = psutil.cpu_percent(percpu=True)
+
+        for i, cpu_percent in enumerate(cpu_info):
+            label_cpu_core = tk.Label(self.root, text=f"CPU Core {i}: {cpu_percent}%")
+            label_cpu_core.pack()
+            self.label_cpu_cores.append(label_cpu_core)
+
+    def create_gpu_widgets(self):
+        cuda.init()
+        device_count = cuda.Device.count()
+
+        for i in range(device_count):
+            handle = cuda.Device(i)
+            gpu_percent = handle.get_utilization_rates()[0]
+
+            label_gpu_core = tk.Label(self.root, text=f"GPU {i}: {gpu_percent}%")
+            label_gpu_core.pack()
+            self.label_gpu_cores.append(label_gpu_core)
+
+    def increase_load(self):
+        self.cpu_increase = int(self.entry_cpu_increase.get())
+        self.gpu_increase = int(self.entry_gpu_increase.get())
+
+        for i, label_cpu_core in enumerate(self.label_cpu_cores):
+            current_cpu_percent = int(label_cpu_core.cget("text").split(":")[1].strip()[:-1])
+            new_cpu_percent = current_cpu_percent + self.cpu_increase
+            label_cpu_core.config(text=f"CPU Core {i}: {new_cpu_percent}%")
+
+        for i, label_gpu_core in enumerate(self.label_gpu_cores):
+            current_gpu_percent = int(label_gpu_core.cget("text").split(":")[1].strip()[:-1])
+            new_gpu_percent = current_gpu_percent + self.gpu_increase
+            label_gpu_core.config(text=f"GPU {i}: {new_gpu_percent}%")
+
+    def reset_load(self):
+        for label_cpu_core in self.label_cpu_cores:
+            label_cpu_core.config(text=label_cpu_core.cget("text").split(":")[0] + ": 0%")
+
+        for label_gpu_core in self.label_gpu_cores:
+            label_gpu_core.config(text=label_gpu_core.cget("text").split(":")[0] + ": 0%")
+
+
+if __name__ == "__main__":
+    ResourceMonitor()
